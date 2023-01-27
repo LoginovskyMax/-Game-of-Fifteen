@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+    background-image: url('./assets/fon.jpg'); 
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+   
+  }
+.field{
+    width: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.cell{
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 5px 3px orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.8s;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.active{
+    transition: 0.8s;
+    cursor: pointer;
+    background-color: rgba(255, 166, 0, 0.425);
+    &:hover{
+        box-shadow: 0 0 5px 3px red;
+    }
+}
+.drag{
+    background-color: rgba(255, 166, 0, 0.747);
+}
+.btns_div{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.button{
+    padding: 5px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 4px orange;
+    border: none;
+    &:hover{
+        background-color: orange;
+        transform: translateY(-3px);
+        transition: 0.4s;
+    }
+    &:active{
+        background-color: orangered;
+    }
+}
+.sizes{
+    padding-top: 30px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.radio{
+    opacity: 0;
+    position: absolute;
+    z-index: -5;
+}
+.label{
+    font-weight: bold;
+}
+.label:hover{
+    cursor: pointer;
+    color: orange;
+    transform: translateY(-3px);
+    transition: 0.4s;
+}
+.focus{
+    color: red;
+}
+.text_size{
+    width: 95%;
+    padding-top: 15px;
+    text-align: center;
+    margin: 0 auto;
+}
+.sound_img{
+    width: 40px;
+    transition: 0.4s;
+    &:hover{
+        cursor: pointer;
+        transform: translateY(-3px);
+    }
+}
+.modal{
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255, 166, 0, 0.493);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal_info{
+        padding: 20px;
+        width: 250px;
+        height: 0px;
+        background-color: orange;
+        position: relative;
+        transition: 0.5s ease-in-out;
+        .close_btn{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+        }
+        .win_text{
+            width: 180px;
+        }
+    }
+}
